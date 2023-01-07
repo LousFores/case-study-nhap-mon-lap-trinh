@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h2>CHUYỂN ĐỔI NHIỆT ĐỘ</h2>
+     <p>Fahrenheit <input type="number" oninput="temperature(this.value)"></p>
+     <p>Celsius: <span id="retuln"></span></p>
+     <script>
+        function temperature(value) {
+            value = parseFloat(value);
+            document.getElementById('retuln').innerHTML = (value - 32)/18;
+        }
+     </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+        }
+        table th, td  {
+            border: 2px solid grey;
+        }
+        h2 {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h2>CHUYỂN ĐỔI ĐƠN VỊ</h2>
+    <table>
+        <tr>
+            <th>Meter - > Foot</th>
+            <th>Foot - > Meter</th>
+        </tr>
+        <tr>
+            <td>
+                <p>Meter <input type="number" oninput="metertoFoot(this.value) "></p>
+                <p>Foot: <span id="mF"></span></p>
+            </td>
+            <td>
+                <p>Foot <input type="number" oninput="foottoMeter(this.value)"></p>
+                <p>Meter: <span id="fM"></span></p>
+            </td>
+        </tr>
+        <tr></tr>
+    </table>
+    <script>
+        function metertoFoot(value) {
+            value = parseFloat(value);
+            document.getElementById('mF').innerHTML =  value*3.279;
+        }
+        function foottoMeter(value) {
+            value = parseFloat(value);
+            document.getElementById('fM').innerHTML = value*0.305;
+        }
+    </script>
+</body>
+</html>

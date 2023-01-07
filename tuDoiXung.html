@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = prompt('Nhập vào dãy kí:');
+        let num = str.length;
+        function isPalindrome() {
+            let i = 0;
+            let soDao ='';
+            while (i<= num) {
+                soDao += str.charAt(num-i);
+                i++;
+            }
+            if (str == soDao) {
+               return true;
+            } else {
+               return false;
+            }
+        } 
+        if (isPalindrome()) {
+             alert('Đây là dãy đối xưng!');
+        } else {
+            alert('Đây không phải dãy đối xứng!');
+        }
+    </script>
+</body>
+</html>
